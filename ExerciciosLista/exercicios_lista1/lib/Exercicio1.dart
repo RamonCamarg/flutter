@@ -1,38 +1,41 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); // Inicializa o aplicativo Flutter
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Exercício 1"),
+          title: Text("Exercício 1"), // Define o título da AppBar
         ),
         body: Column(children: [
+          // Corpo do aplicativo contendo uma coluna com vários containers
           Container(
             width: 100,
             height: 100,
-            color: Colors.blue,
-            child: Text("Container 1"),
+            color: Color.fromARGB(
+                255, 255, 8, 0), // Cor de fundo do primeiro container
+            child: Text("Container 1"), // Texto dentro do primeiro container
           ),
-           Container(
+          Container(
             width: 150,
             height: 150,
-            color: Colors.red,
-            child: Text("Container 2"),
+            color: Color.fromARGB(
+                255, 255, 208, 0), // Cor de fundo do segundo container
+            child: Text("Container 2"), // Texto dentro do segundo container
           ),
-           Container(
+          Container(
             width: 200,
             height: 200,
-            color: Colors.green,
-            child: Text("Container 3"),
+            color: const Color.fromARGB(
+                255, 0, 255, 8), // Cor de fundo do terceiro container
+            child: Text("Container 3"), // Texto dentro do terceiro container
           )
         ]),
       ),
