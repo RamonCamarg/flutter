@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(fontSize: 14),
                 ),
                 leading: CircleAvatar(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Color.fromARGB(255, 76, 0, 255),
                   child: Icon(Icons.person, color: Colors.white),
                 ),
                 onTap: () {

@@ -22,9 +22,9 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    Text('Seção 1'),
-    Text('Seção 2'),
-    Text('Seção 3'),
+    Text('1'),
+    Text('2'),
+    Text('3'),
   ];
 
   void _onItemTapped(int index) {
@@ -46,15 +46,15 @@ class _MyHomePageState extends State<MyHomePage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Seção 1',
+            label: '1',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Seção 2',
+            label: '1',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Seção 3',
+            label: '3',
           ),
         ],
         currentIndex: _selectedIndex,

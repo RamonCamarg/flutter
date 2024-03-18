@@ -19,19 +19,19 @@ class MyApp extends StatelessWidget {
           Container(
             width: 100,
             height: 100,
-            color: Colors.blue,
+            color: Color.fromARGB(255, 255, 0, 0),
             child: Text("Container 1"),
           ),
            Container(
             width: 150,
             height: 150,
-            color: Colors.red,
+            color: Color.fromARGB(255, 255, 238, 0),
             child: Text("Container 2"),
           ),
            Container(
             width: 200,
             height: 200,
-            color: Colors.green,
+            color: Color.fromARGB(255, 0, 255, 94),
             child: Text("Container 3"),
           )
         ]),

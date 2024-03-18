@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
                   Container(
                     width: 150,
                     height: 150,
-                    color: Color.fromARGB(255, 49, 221, 86),
+                    color: Color.fromARGB(255, 234, 255, 0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
                   Container(
                     width: 150,
                     height: 150,
-                    color: Color.fromARGB(255, 51, 96, 243),
+                    color: Color.fromARGB(255, 0, 255, 34),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

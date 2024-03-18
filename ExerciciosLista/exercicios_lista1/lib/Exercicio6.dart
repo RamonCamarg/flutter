@@ -18,7 +18,7 @@ class ResponsiveLayoutDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Layout Responsivo com MediaQuery'),
+        title: Text('Layout Responsivo'),
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {

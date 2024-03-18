@@ -42,7 +42,7 @@ class _ContactFormState extends State<ContactForm> {
                 decoration: InputDecoration(labelText: 'Nome'),
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Por favor, insira seu nome.';
+                    return 'Insira seu nome.';
                   }
                   return null;
                 },
@@ -52,7 +52,7 @@ class _ContactFormState extends State<ContactForm> {
                 decoration: InputDecoration(labelText: 'E-mail'),
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Por favor, insira seu e-mail.';
+                    return 'Insira seu e-mail.';
                   }
                   // Pode adicionar validações de e-mail aqui
                   return null;
@@ -63,7 +63,7 @@ class _ContactFormState extends State<ContactForm> {
                 decoration: InputDecoration(labelText: 'Mensagem'),
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Por favor, insira uma mensagem.';
+                    return 'Insira uma mensagem.';
                   }
                   return null;
                 },
