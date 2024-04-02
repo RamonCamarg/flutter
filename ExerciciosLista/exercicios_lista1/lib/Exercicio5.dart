@@ -49,7 +49,7 @@ class _ContactFormState extends State<ContactForm> {
                     labelText: 'Nome'), // Define a aparência do campo de nome
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Insira seu nome.';
+                    return 'Por favor, insira seu nome.'; // Validação do campo de nome
                   }
                   return null;
                 },
@@ -62,7 +62,7 @@ class _ContactFormState extends State<ContactForm> {
                         'E-mail'), // Define a aparência do campo de e-mail
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Insira seu e-mail.';
+                    return 'Por favor, insira seu e-mail.'; // Validação do campo de e-mail
                   }
                   // Pode adicionar validações de e-mail aqui
                   return null;
@@ -76,7 +76,7 @@ class _ContactFormState extends State<ContactForm> {
                         'Mensagem'), // Define a aparência do campo de mensagem
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Insira uma mensagem.';
+                    return 'Por favor, insira uma mensagem.'; // Validação do campo de mensagem
                   }
                   return null;
                 },

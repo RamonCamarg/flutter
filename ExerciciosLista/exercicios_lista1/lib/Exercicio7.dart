@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Menu Lateral'),
+        title: Text('Menu Lateral (Drawer)'), // Define o título da AppBar
         // Adicionando o botão de menu no AppBar
         leading: Builder(
           builder: (BuildContext context) {

@@ -22,13 +22,13 @@ class AnimatedContainerExample extends StatefulWidget {
 class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
   // Variáveis para controlar a posição e a cor do contêiner animado
   double _left = 0;
-  Color _color = Color.fromARGB(255, 195, 255, 0);
+  Color _color = Color.fromARGB(255, 44, 30, 243);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Container com animação'), // Título da AppBar
+        title: Text('Container com animação '), // Título da AppBar
       ),
       body: Center(
         child: GestureDetector(
@@ -38,9 +38,10 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
               _left = _left == 0
                   ? 200
                   : 0; // Altera a posição horizontal do contêiner
-              _color = _color == Color.fromARGB(255, 254, 0, 0)
-                  ? Color.fromARGB(255, 238, 255, 0)
-                  : Color.fromARGB(255, 43, 255, 0); // Altera a cor do contêiner
+              _color = _color == const Color.fromARGB(255, 44, 30, 243)
+                  ? Color.fromARGB(255, 26, 180, 46)
+                  : Color.fromARGB(
+                      255, 44, 30, 243); // Altera a cor do contêiner
             });
           },
           child: AnimatedContainer(

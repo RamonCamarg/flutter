@@ -33,8 +33,10 @@ class MyApp extends StatelessWidget {
                       TextStyle(fontSize: 14), // Estilo do texto do subtítulo
                 ),
                 leading: CircleAvatar(
-                  backgroundColor: Color.fromARGB(255, 76, 0, 255),
-                  child: Icon(Icons.person, color: Colors.white),
+                  // Um CircleAvatar como elemento à esquerda do ListTile
+                  backgroundColor: Colors.blue, // Cor de fundo do CircleAvatar
+                  child: Icon(Icons.person,
+                      color: Colors.white), // Ícone dentro do CircleAvatar
                 ),
                 onTap: () {
                   // Ação ao clicar no item (a ser implementada)

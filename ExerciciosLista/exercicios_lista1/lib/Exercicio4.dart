@@ -24,9 +24,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // Lista de widgets para as diferentes seções
   static const List<Widget> _widgetOptions = <Widget>[
-    Text('1'),
-    Text('2'),
-    Text('3'),
+    Text('Seção 1'),
+    Text('Seção 2'),
+    Text('Seção 3'),
   ];
 
   // Função para lidar com o evento de seleção de item no BottomNavigationBar
@@ -51,16 +51,16 @@ class _MyHomePageState extends State<MyHomePage> {
         items: <BottomNavigationBarItem>[
           // Define os itens do BottomNavigationBar
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: '1',
+            icon: Icon(Icons.home), // Ícone para a primeira seção
+            label: 'Seção 1', // Rótulo para a primeira seção
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: '1',
+            icon: Icon(Icons.search), // Ícone para a segunda seção
+            label: 'Seção 2', // Rótulo para a segunda seção
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: '3',
+            icon: Icon(Icons.person), // Ícone para a terceira seção
+            label: 'Seção 3', // Rótulo para a terceira seção
           ),
         ],
         currentIndex: _selectedIndex, // Índice do item atualmente selecionado

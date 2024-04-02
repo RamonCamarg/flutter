@@ -8,7 +8,7 @@ class ProductCardsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Cards Produtos', // Define o título do aplicativo
+      title: 'Product Cards', // Define o título do aplicativo
       theme: ThemeData(
         primarySwatch: Colors.blue, // Define a cor primária do tema
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -23,7 +23,7 @@ class ProductCardsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cards Produtos'), // Define o título da barra de aplicativos
+        title: Text('Product Cards'), // Define o título da barra de aplicativos
       ),
       body: Container(
         padding: EdgeInsets.all(16.0), // Define o preenchimento do conteúdo
@@ -32,13 +32,13 @@ class ProductCardsScreen extends StatelessWidget {
             ProductCard(
               imageUrl:
                   'https://via.placeholder.com/150', // URL da imagem do produto
-              title: 'Produto 1', // Título do produto
-              description: 'Descricao Produto 1', // Descrição do produto
+              title: 'Product 1', // Título do produto
+              description: 'Description of Product 1', // Descrição do produto
             ),
             ProductCard(
               imageUrl: 'https://via.placeholder.com/150',
-              title: 'Produto 2',
-              description: 'Descricao Produto 2',
+              title: 'Product 2',
+              description: 'Description of Product 2',
             ),
             // Adicione mais ProductCards conforme necessário
           ],
