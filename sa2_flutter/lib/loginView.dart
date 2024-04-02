@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'DataBaseController.dart'; // Importa o controlador do banco de dados
 import 'Model.dart'; // Importa o modelo de contato
+import 'cadastroView.dart'; // Importa a página de cadastro
 
 class LoginView extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
@@ -36,7 +37,6 @@ class LoginView extends StatelessWidget {
                   List<ContactModel> contatos = await _db.getContacts();
                   ContactModel? usuario = contatos.firstWhere(
                     (contato) => contato.email == _emailController.text && contato.senha == _senhaController.text,
-                     
                   );
 
                   if (usuario != null) {
@@ -50,6 +50,16 @@ class LoginView extends StatelessWidget {
                   }
                 },
                 child: Text('Login'),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CadastroView()), // Navega para a página de cadastro
+                  );
+                },
+                child: Text('Cadastrar'),
               ),
             ],
           ),
