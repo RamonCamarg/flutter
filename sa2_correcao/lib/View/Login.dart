@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 
 import '../Controller/BancoDados.dart';
 import '../Model/Usuario.dart';
-import 'CadastroPageView.dart';
-import 'ToDoListPageView.dart';
+import 'Cadastro.dart';
+import 'ListaTarefas.dart';
 
 class PaginaLogin extends StatefulWidget {
   const PaginaLogin({super.key});
@@ -23,7 +23,7 @@ class _PaginaLoginState extends State<PaginaLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tela de Login"),
+        title: Text("Login"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -46,9 +46,9 @@ class _PaginaLoginState extends State<PaginaLogin> {
                   decoration: InputDecoration(labelText: 'E-mail'),
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
-                      return 'Por favor, insira seu e-mail';
+                      return 'Digite seu Email';
                     } else if (!isValidEmail(value)) {
-                      return 'E-mail inválido';
+                      return 'Nao foi possivel acessar';
                     }
                     return null;
                   },
@@ -63,7 +63,7 @@ class _PaginaLoginState extends State<PaginaLogin> {
                   obscureText: true,
                   validator: (value) {
                     if (value?.trim().isEmpty ?? true) {
-                      return 'Por favor, insira sua senha';
+                      return 'Digite sua senha';
                     }
                     return null;
                   },
@@ -83,7 +83,7 @@ class _PaginaLoginState extends State<PaginaLogin> {
                       MaterialPageRoute(builder: (context) => PaginaCadastro()),
                     );
                   },
-                  child: Text('Não tem uma conta? Cadastre-se'),
+                  child: Text('Cadastre-se'),
                 ),
               ],
             ),
@@ -114,13 +114,13 @@ class _PaginaLoginState extends State<PaginaLogin> {
           );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: Text('Email ou senha incorretos'),
+            content: Text('Email ou senha invalidos'),
           ));
         }
       } catch (e) {
-        print('Erro durante o login: $e');
+        print('Erro ao efetuar login: $e');
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text('Erro durante o login. Tente novamente mais tarde.'),
+          content: Text('Erro ao efetuar o login. Tente novamente mais tarde.'),
         ));
       } finally {
         setState(() {

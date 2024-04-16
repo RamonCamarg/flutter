@@ -25,7 +25,7 @@ class _PaginaCadastroState extends State<PaginaCadastro> {
     try {
       bancoDados.create(usuario);
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Usuário cadastrado com sucesso!')),
+        SnackBar(content: Text('Usuário cadastrado!')),
       );
       Navigator.pop(context); // Redireciona para a tela de login
     } catch (e) {
@@ -38,7 +38,7 @@ class _PaginaCadastroState extends State<PaginaCadastro> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Página de Cadastro"),),
+      appBar: AppBar(title: Text("Cadastro"),),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Form(
@@ -60,7 +60,7 @@ class _PaginaCadastroState extends State<PaginaCadastro> {
                   decoration: InputDecoration(labelText: 'Nome'),
                   validator: (value) {
                     if (value?.trim().isEmpty ?? true) {
-                      return 'Por favor, insira seu nome';
+                      return 'Digite seu nome';
                     }
                     if (!RegExp(r'^[a-zA-ZÀ-ú-\s]+$').hasMatch(value!)) {
                       return 'Nome inválido';
@@ -74,7 +74,7 @@ class _PaginaCadastroState extends State<PaginaCadastro> {
                   decoration: InputDecoration(labelText: 'E-mail'),
                   validator: (value) {
                     if (value?.trim().isEmpty ?? true) {
-                      return 'Por favor, insira seu e-mail';
+                      return 'Digite seu e-mail';
                     }
                     if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
                         .hasMatch(value!)) {
@@ -90,7 +90,7 @@ class _PaginaCadastroState extends State<PaginaCadastro> {
                   obscureText: true,
                   validator: (value) {
                     if (value?.trim().isEmpty ?? true) {
-                      return 'Por favor, insira sua senha';
+                      return 'Digite sua senha';
                     }
                     return null;
                   },
